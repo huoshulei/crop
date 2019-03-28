@@ -1,8 +1,8 @@
 name: crop
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: huoshulei<hsl_4444@163.com>
+homepage: https://github.com/huoshulei/crop
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
