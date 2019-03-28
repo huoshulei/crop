@@ -1,14 +1,30 @@
-# crop
 
-A new Flutter package project.
+## dart 图片裁剪
+    使用：
+    imageFile 原图文件（File）
+    width 屏幕宽度
+    height 屏幕高度
+    pngBytes 裁剪后 ByteData 格式的目标图片字节码
 
-## Getting Started
+```
+    Navigator.push(context,CupertinoPageRoute(builder: (context) {
+                          var height = MediaQuery.of(context).size.height;
+                          var width = MediaQuery.of(context).size.width;
+                          return CropPage(imageFile, width, height);
+                        })).then((pngBytes) {
+                          if (pngBuffer != null) {
+                            setState(() {
 
-This project is a starting point for a Dart
-[package](https://flutter.io/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+                             ...
+                            });
+                          }
+                        });
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```
+```
+  var asUint8List = byteData.buffer.asUint8List();
+ getApplicationDocumentsDirectory().then((dir) {
+   var path = dir.path +
+       '/${DateTime.now().millisecondsSinceEpoch}.png';
+   File(path).writeAsBytesSync(asUint8List);
+```

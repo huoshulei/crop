@@ -1,6 +1,5 @@
 library crop;
 
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -156,9 +155,8 @@ class _CropState extends State<CropPage> {
                           .endRecording()
                           .toImage(w.toInt(), h.toInt())
                           .then((image) async {
-                        var byteData =
+                        var pngBytes =
                             await image.toByteData(format: ImageByteFormat.png);
-                        var pngBuffer = byteData.buffer;
 //                        var asUint8List = byteData.buffer.asUint8List();
 //                        getApplicationDocumentsDirectory().then((dir) {
 //                          var path = dir.path +
@@ -166,7 +164,7 @@ class _CropState extends State<CropPage> {
 //                          File(path).writeAsBytesSync(asUint8List);
 //                          Navigator.pop(context, path);
 //                        });
-                        Navigator.pop(context, pngBuffer);
+                        Navigator.pop(context, pngBytes);
                       });
                     }
                   },
