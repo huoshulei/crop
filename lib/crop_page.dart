@@ -10,8 +10,10 @@ class CropPage extends StatefulWidget {
   var _imageFile;
   var _width;
   var _height;
-
-  CropPage(this._imageFile, this._width, this._height);
+  bool square; //1:1等比例裁剪
+  CropPage(this._imageFile, this._width, this._height, {
+    this.square = true,
+  });
 
   @override
   State<StatefulWidget> createState() {
