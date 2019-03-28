@@ -14,7 +14,6 @@
                         })).then((pngBytes) {
                           if (pngBuffer != null) {
                             setState(() {
-
                              ...
                             });
                           }
