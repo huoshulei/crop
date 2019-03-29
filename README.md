@@ -1,7 +1,7 @@
 
 ## dart 图片裁剪
 
-![avatar](/img/crop.png)
+![avatar](https://github.com/huoshulei/crop/blob/master/img/corp.png)
 
     使用：
     imageFile 原图文件（File）
