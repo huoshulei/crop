@@ -175,7 +175,7 @@ class _CropState extends State<CropPage> {
                 )
               ],
             ),
-            color: Color(0x88000000),
+            color: Color(0x00000000),
             alignment: Alignment.topCenter,
             padding: EdgeInsets.all( 20),
             height: 70,
