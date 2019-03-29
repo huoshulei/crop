@@ -1,6 +1,8 @@
 
 ## dart 图片裁剪
-    ![avatar](/img/crop.png)
+
+![avatar](/img/crop.png)
+
     使用：
     imageFile 原图文件（File）
     width 屏幕宽度
